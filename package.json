@@ -1,0 +1,19 @@
+{
+  "name": "yasha",
+  "version": "0.1",
+  "description": "Learn Linux and C fundamentals on Team yasha's Wargame!",
+  "main": "index.js",
+  "repository": "git@github.com:ShanTulshi/460.git",
+  "author": "Shan Tulshi <shan.tulshi@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.17",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "scripts": {
+    "build": "cd frontend; jekyll build; cd ../ ;"
+  }
+}
