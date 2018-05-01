@@ -1,0 +1,6 @@
+[submodule "wetty"]
+	path = wetty
+	url = git@github.com:ShanTulshi/wetty.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:ShanTulshi/460site.git
