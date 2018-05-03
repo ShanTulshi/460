@@ -21,6 +21,7 @@
     "socket.io": "^2.1.0"
   },
   "scripts": {
-    "build": "cd frontend; jekyll build; cd ../ ;"
+    "build": "cd frontend; jekyll build; cd ../ ;",
+    "start": "nodemon"
   }
 }
