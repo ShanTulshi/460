@@ -46,8 +46,8 @@ const port = ((opts.port) ? opts.port : default_port);
 if(opts.sslkey && opts.sslcert) {
 	usehttps = true;
 	sslconf = {
-		sslkey: fs.readFileSync(path.resolve(opts.sslkey)),
-		sslcert: fs.readFileSync(path.resolve(opts.sslcert)),
+		key: fs.readFileSync(path.resolve(opts.sslkey)),
+		cert: fs.readFileSync(path.resolve(opts.sslcert)),
 	};
 }
 
