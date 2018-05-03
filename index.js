@@ -4,17 +4,24 @@ let express = require('express'),
 		router = express.Router(),
 		mongoose = require('mongoose'),
 		bodyParser = require('body-parser'),
-		wetty = require('./wetty/wetty'),
+		wetty = require('./wetty'),
 		passport = require('passport'),
 		LocalStrategy = require('passport-local'),
 		http = require('http'),
 		https = require('https'),
 		fs = require('fs'),
-		path = require('path')
+		path = require('path'),
+		pty = require('pty'),
+		sockio = require('socket.io')
 		;
 
 const default_port = 8080;
 let usehttps = false;
+let sshport = 22;
+let sshhost = 'localhost';
+let sshauth = 'password,keyboard-interactive';
+let sockpath = '/wetty/socket.io/';
+let globalsshuser = '';
 let sslconf, httpserv;
 
 const opts = require('optimist')
@@ -39,24 +46,12 @@ const port = ((opts.port) ? opts.port : default_port);
 if(opts.sslkey && opts.sslcert) {
 	usehttps = true;
 	sslconf = {
-		key: fs.readFileSync(path.resolve(opts.sslkey)),
-		cert: fs.readFileSync(path.resolve(opts.sslcert)),
+		sslkey: fs.readFileSync(path.resolve(opts.sslkey)),
+		sslcert: fs.readFileSync(path.resolve(opts.sslcert)),
 	};
 }
 
 let app = express();
-
-app.use(bodyParser.urlencoded({
-	extended: true,
-}));
-app.use(bodyParser.json());
-
-app.use('/wetty', wetty(httpserv, router, {
-	sslkey: opts.sslkey,
-	sslcert: opts.sslcert,
-}));
-app.use('/', express.static(__dirname + '/frontend/_site/'));
-app.use('/assets', express.static(__dirname + '/frontend/assets'));
 
 if(usehttps) {
 	console.log('https on port ' + port);
@@ -66,5 +61,14 @@ else {
 	console.log('http on port ' + port);
 	httpserv = http.createServer(app);
 }
+
+app.use(bodyParser.urlencoded({
+	extended: true,
+}));
+app.use(bodyParser.json());
+
+app.use('/', express.static(__dirname + '/frontend/_site/'));
+
+app.use('/wetty', wetty(opts, httpserv));
 
 httpserv.listen(port);

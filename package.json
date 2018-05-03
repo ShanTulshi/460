@@ -16,7 +16,9 @@
     "optimist": "^0.6.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pty": "^0.0.0",
+    "socket.io": "^2.1.0"
   },
   "scripts": {
     "build": "cd frontend; jekyll build; cd ../ ;"
