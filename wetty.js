@@ -51,6 +51,7 @@ module.exports = (opts, httpserv) => {
 				sshuser = match[0].replace('/wetty/ssh/', '') + '@';
 		} else {
 			console.log('Bad request: ' + request.headers.referer);
+			return;
 		}
 
 		// if (process.getuid() == -1) {
