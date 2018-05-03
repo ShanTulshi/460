@@ -27,11 +27,11 @@ let sslconf, httpserv;
 const opts = require('optimist')
 	.options({
 		sslkey: {
-			demand: false,
+			demand: true,
 			description: 'path to SSL key',
 		},
 		sslcert: {
-			demand: false,
+			demand: true,
 			description: 'path to SSL cert',
 		},
 		port: {
