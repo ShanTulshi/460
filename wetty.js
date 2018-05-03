@@ -13,7 +13,8 @@ let express = require('express'),
 		fs = require('fs'),
 		path = require('path'),
 		pty = require('pty'),
-		sockio = require('socket.io')
+		sockio = require('socket.io'),
+		cmd = require('node-cmd')
 ;
 
 let app = express.Router();
@@ -36,7 +37,14 @@ module.exports = (opts, httpserv) => {
   }
 
 	app.get('/ssh/:user', (req, res) => {
-		res.sendFile(__dirname + '/public/index.html');
+		cmd.get('groups ' + req.params.user, (err, data, stderr) => {
+			if(data.includes('players') > 0) {
+				res.sendFile(__dirname + '/public/index.html');
+			}
+			else {
+				res.sendStatus(403);
+			}
+		});
 	});
 
 	app.use('/', express.static(path.join(__dirname, '/public/wetty')));
