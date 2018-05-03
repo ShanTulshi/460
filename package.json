@@ -23,6 +23,6 @@
   "scripts": {
     "build": "cd frontend; jekyll build; cd ../ ;",
     "start": "nodemon",
-    "sstart": "nodemon --sslkey /etc/letsencrypt/live/project.ymostofi.xyz/privkey.pem --sslcert /etc/letsencrypt/live/project.ymostofi.xyz/cert.pem"
+    "sstart": "nodemon --sslkey=/etc/letsencrypt/live/project.ymostofi.xyz/privkey.pem --sslcert=/etc/letsencrypt/live/project.ymostofi.xyz/cert.pem"
   }
 }
