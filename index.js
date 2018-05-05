@@ -1,6 +1,6 @@
 'use strict';
 
-let express = require('express'),
+let     express = require('express'),
 		router = express.Router(),
 		mongoose = require('mongoose'),
 		bodyParser = require('body-parser'),
