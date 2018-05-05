@@ -12,6 +12,7 @@ def create_entry_script(username):
     with open('/home/{}/entry_script.sh'.format(username), 'w+') as f:
         f.write(template.format(username))
     os.chmod('/home/{}/entry_script.sh'.format(username), 0o755)
+    print('Created  /home/{}/entry_script.sh successfully!'.format(username))
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
