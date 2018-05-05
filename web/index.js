@@ -202,5 +202,9 @@ app.get('/logout', function(req, res){
     req.session.notice = "You have successfully been logged out " + name + "!";
 });
 app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
+app.get('/term', ensureAuthenticated, function(req, res, next) {
+    console.log("TERM for user: " + req.user.username);
+    res.redirect('/wetty/ssh/' + req.user.username);
+});
 
 httpserv.listen(port);
