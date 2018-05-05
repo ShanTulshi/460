@@ -15,7 +15,8 @@ let     express = require('express'),
 		sockio = require('socket.io'),
         session = require('express-session'),
         exphbs = require('express-handlebars'),
-        methodOverride = require('method-override')
+        methodOverride = require('method-override'),
+        JSON = require('json')
 		;
 
 const default_port = 8080;
@@ -170,36 +171,36 @@ function ensureAuthenticated(req, res, next) {
 //app.use('/', express.static(__dirname + '/frontend/_site/'));
 //displays our homepage
 app.get('/', function(req, res){
-  res.render('home', {user: req.user});
+    res.render('home', {user: req.user});
 });
 
 //displays our signup page
 app.get('/signin', function(req, res){
-  res.render('signin');
+    res.render('signin');
 });
 
 //sends the request through our local signup strategy, and if successful takes user to homepage, otherwise returns then to signin page
 app.post('/local-reg', passport.authenticate('local-signup', {
-  successRedirect: '/',
-  failureRedirect: '/signin'
+    successRedirect: '/',
+    failureRedirect: '/signin'
   })
 );
 
 //sends the request through our local login/signin strategy, and if successful takes user to homepage, otherwise returns then to signin page
 app.post('/login', passport.authenticate('local-signin', {
-  successRedirect: '/',
-  failureRedirect: '/signin'
+    successRedirect: '/',
+    failureRedirect: '/signin'
   })
 );
 
 //logs user out of site, deleting them from the session, and returns to homepage
 app.get('/logout', function(req, res){
-  var name = req.user.username;
-  console.log("LOGGIN OUT " + req.user.username)
-  req.logout();
-  res.redirect('/');
-  req.session.notice = "You have successfully been logged out " + name + "!";
+    var name = req.user.username;
+    console.log("LOGGING OUT " + req.user.username)
+    req.logout();
+    res.redirect('/');
+    req.session.notice = "You have successfully been logged out " + name + "!";
 });
-app.use('/wetty', wetty(opts, httpserv));
+app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
 
 httpserv.listen(port);
