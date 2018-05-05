@@ -1,6 +1,6 @@
 'use strict';
 
-let     express = require('express'),
+let express = require('express'),
 		router = express.Router(),
 		mongoose = require('mongoose'),
 		bodyParser = require('body-parser'),
@@ -13,11 +13,11 @@ let     express = require('express'),
 		path = require('path'),
 		pty = require('pty'),
 		sockio = require('socket.io'),
-        session = require('express-session'),
-        exphbs = require('express-handlebars'),
-        methodOverride = require('method-override'),
-        JSON = require('json')
-		;
+		session = require('express-session'),
+		exphbs = require('express-handlebars'),
+		methodOverride = require('method-override'),
+		JSON = require('json')
+	;
 
 const default_port = 8080;
 let usehttps = false;

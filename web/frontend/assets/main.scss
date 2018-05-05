@@ -1,0 +1,31 @@
+---
+---
+
+.home {
+	display: block;
+}
+
+@media (max-width: 1000px) {
+	.term-window: {
+		display: none;
+	}
+	.instructions: {
+		display: block;
+	}
+}
+
+@media (min-width: 1000px) {
+	.term-window: {
+		display: inline-block;
+		visibility: visible;
+		width: 75%;
+		float: left;
+	}
+	.instructions: {
+		display: inline-block;
+		width: 20%;
+		float: right;
+	}
+}
+
+@import "minima";
