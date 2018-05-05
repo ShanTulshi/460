@@ -5,7 +5,7 @@ import logging
 
 template = """#!/bin/bash
 
-docker run -v /home/{0}:/home/{0} --cpu-shares=500 -m 40m --memory-swap=40m --hostname=yasha -it wetty bash
+docker run -v /home/{0}/workdir:/home/war --cpu-shares=500 -m 40m --memory-swap=40m --hostname=yasha -it wetty bash
 """
 
 def create_entry_script(username):
