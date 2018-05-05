@@ -168,7 +168,7 @@ function ensureAuthenticated(req, res, next) {
 }
 
 //===============ROUTES=================
-//app.use('/', express.static(__dirname + '/frontend/_site/'));
+
 //displays our homepage
 app.get('/', function(req, res){
     res.render('home', {user: req.user});
@@ -201,7 +201,11 @@ app.get('/logout', function(req, res){
     res.redirect('/');
     req.session.notice = "You have successfully been logged out " + name + "!";
 });
+
+app.use('/challenges', express.static(__dirname + '/frontend/_site'));
+
 app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
+
 app.get('/term', ensureAuthenticated, function(req, res, next) {
     console.log("TERM for user: " + req.user.username);
     res.redirect('/wetty/ssh/' + req.user.username);

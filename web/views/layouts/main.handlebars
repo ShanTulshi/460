@@ -46,13 +46,21 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <a href="/wetty/ssh{{user.username}}">Shell</a>
+                    <a href="/challenges/{{user.challenge}}">Current Challenge</a>
+                  </li>
+                  <li>
+                    <a href="/term">Shell</a>
                   </li>
                   <li>
                     <a href="/logout">Log Out</a>
                   </li>
               {{else}}
                 <a href="/signin">Sign In</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/challenges/">Challenges</a>
                 </li>
               {{/if}}
           </ul>

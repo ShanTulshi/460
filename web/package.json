@@ -31,6 +31,6 @@
   "scripts": {
     "build": "cd frontend; jekyll build; cd ../ ;",
     "dev": "nodemon index.js",
-    "start": "nodemon index.js --sslkey=/etc/letsencrypt/live/project.ymostofi.xyz/privkey.pem --sslcert=/etc/letsencrypt/live/project.ymostofi.xyz/cert.pem"
+    "start": "sudo nodemon index.js --sslkey=/etc/letsencrypt/live/project.ymostofi.xyz/privkey.pem --sslcert=/etc/letsencrypt/live/project.ymostofi.xyz/cert.pem"
   }
 }
