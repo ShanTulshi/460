@@ -53,7 +53,7 @@ exports.localReg = function (username, password) {
                     'sudo adduser --gecos "" --shell /home/' + username + '/entry_script.sh --ingroup players --disabled-password ' + username,
                     // util.format('echo -e "%s\n%s" | sudo passwd %s', password, password, username),
                     'sudo usermod -a -G docker ' + username,
-                    'sudo mkdir -u ' + username +  ' /home/' + username + '/workdir',
+                    'sudo -u ' + username +  ' mkdir /home/' + username + '/workdir',
                     'sudo ../infra/create_entry_script.py ' + username
                 ], function(err) {
                     var child = cp.spawn('passwd', [username], {
