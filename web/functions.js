@@ -54,6 +54,7 @@ exports.localReg = function (username, password) {
                     // util.format('echo -e "%s\n%s" | sudo passwd %s', password, password, username),
                     'sudo usermod -a -G docker ' + username,
                     'sudo -u ' + username +  ' mkdir /home/' + username + '/workdir',
+                    'sudo chown 1000:1000 /home/' + username + '/workdir',
                     'sudo ../infra/create_entry_script.py ' + username
                 ], function(err) {
                     var child = cp.spawn('passwd', [username], {
