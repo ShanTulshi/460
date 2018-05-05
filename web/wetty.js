@@ -37,6 +37,9 @@ module.exports = (opts, httpserv) => {
   }
 
 	app.get('/ssh/:user', (req, res) => {
+        if (req.user.username != req.params.user) {
+            res.sendStatus(403);
+        }
 		cmd.get('groups ' + req.params.user, (err, data, stderr) => {
 			if(data.includes('players') > 0) {
 				res.sendFile(__dirname + '/public/index.html');
