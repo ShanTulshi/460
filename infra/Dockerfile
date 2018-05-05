@@ -4,9 +4,9 @@ RUN apt-get update
 RUN apt-get -y install vim
 
 #RUN useradd --create-home --shell /bin/bash test
-RUN useradd --shell /bin/bash test
+RUN useradd --shell /bin/bash war
 
-USER test
-WORKDIR /home/test
+USER war
+WORKDIR /home/war
 
-ADD bashrc /home/test/.bashrc
+ADD bashrc /home/war/.bashrc
