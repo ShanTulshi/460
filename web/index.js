@@ -203,7 +203,7 @@ app.get('/logout', function(req, res){
 });
 
 app.use('/challenges', express.static(__dirname + '/frontend/_site'));
-app.use('/assets', express.static(__dirname + '/frontend/_site/assets'));
+// app.use('/assets', express.static(__dirname + '/frontend/_site/assets'));
 
 app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
 
