@@ -16,7 +16,8 @@ const checker = {
 router.get('/:num', (req, res) => {
 	let result = false;
 	if(checker[req.params.num]) {
-		if(result = checker[req.params.num](req.query.attempt)) {
+		if((result = checker[req.params.num](req.query.attempt)) == true) {
+			req.user.update({ challenge: req.params.num + 1 });
 			res.status(200)
 				.json({result: result})
 				.send();
