@@ -37,9 +37,9 @@ module.exports = (opts, httpserv) => {
   	sshauth = opts.sshauth
   }
 
-  if(opts.idfile) {
-    idfile = opts.idfile;
-  }
+	if(opts.idfile) {
+		idfile = opts.idfile;
+	}
 
 	app.get('/ssh/:user', (req, res) => {
         if (req.user.username != req.params.user) {
@@ -77,8 +77,7 @@ module.exports = (opts, httpserv) => {
 		//         rows: 30
 		//     });
 		// } else {
-		console.log([sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth, '-o', 'IdentityFile=' + idfile]);
-		let term = pty.spawn('ssh', [sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth, '-o', 'IdentityFile=' + idfile], {
+		let term = pty.spawn('ssh', [sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth + ',IdentityFile=' + idfile], {
 				name: 'xterm-256color',
 				cols: 80,
 				rows: 30
