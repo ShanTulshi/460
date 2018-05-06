@@ -13,13 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Team yasha's Wargame
+title: yasha_game
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Learn Linux and C fundamentals with minimal setup, all on this project!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://project.ymostofi.xyz" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: /challenges/
+baseurl: /
 twitter_username: ymostofi
 github_username:  ShanTulshi
 
@@ -30,6 +30,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
+  - challenge.html
   - about.html
 
 # Exclude from processing.

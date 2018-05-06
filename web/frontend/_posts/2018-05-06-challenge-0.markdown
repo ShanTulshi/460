@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Challenge 0"
+date:   2018-05-06 05:33:11 +0000
+categories: challenges
+---
+
+So you've gotten on to our machine! In order to continue challenge one, run check0.sh in your terminal to unlock the next challenge!
+
+Hints:
+
+./ is your friend
