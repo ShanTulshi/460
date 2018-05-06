@@ -20,7 +20,8 @@ let express = require('express'),
 let app = express.Router();
 let sshport = 22;
 let sshhost = 'localhost';
-let sshauth = 'password,keyboard-interactive';
+let sshauth = 'publickey,password,keyboard-interactive';
+let idfile = '/etc/id_rsa';
 
 
 module.exports = (opts, httpserv) => {
@@ -34,6 +35,10 @@ module.exports = (opts, httpserv) => {
 
   if (opts.sshauth) {
   	sshauth = opts.sshauth
+  }
+
+  if(opts.idfile) {
+    idfile = opts.idfile;
   }
 
 	app.get('/ssh/:user', (req, res) => {
@@ -72,7 +77,8 @@ module.exports = (opts, httpserv) => {
 		//         rows: 30
 		//     });
 		// } else {
-		let term = pty.spawn('ssh', [sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth], {
+		console.log([sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth, '-o', 'IdentityFile=' + idfile]);
+		let term = pty.spawn('ssh', [sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth, '-o', 'IdentityFile=' + idfile], {
 				name: 'xterm-256color',
 				cols: 80,
 				rows: 30
