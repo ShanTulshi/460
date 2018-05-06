@@ -2,7 +2,7 @@ let     express = require('express'),
 		router = express.Router()
 	;
 
-const checkExistence = ((challenge, solfile = './sol0.js') => {
+const checkExistence = ((challenge, solfile = './sols/sol0.js') => {
 	let solutions = require(solfile)	// Keep sols.js private
 	return (sol) => {
 		return solutions[challenge] === sol
@@ -10,7 +10,7 @@ const checkExistence = ((challenge, solfile = './sol0.js') => {
 });
 
 const checker = {
-	0: checkExistence(0),
+	0: checkExistence(0, './sols/sol0.js'),
 };
 
 router.get('/:num', (req, res) => {
