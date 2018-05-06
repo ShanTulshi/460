@@ -5,6 +5,7 @@ let express = require('express'),
 		mongoose = require('mongoose'),
 		bodyParser = require('body-parser'),
 		wetty = require('./wetty'),
+		checker = require('./checker'),
 		passport = require('passport'),
 		LocalStrategy = require('passport-local'),
 		http = require('http'),
@@ -203,6 +204,7 @@ app.get('/logout', function(req, res){
 });
 
 app.use('/challenges', express.static(__dirname + '/frontend/_site'));
+app.use('/solution', checker);
 // app.use('/assets', express.static(__dirname + '/frontend/_site/assets'));
 
 app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
