@@ -77,7 +77,7 @@ module.exports = (opts, httpserv) => {
 		//         rows: 30
 		//     });
 		// } else {
-		let term = pty.spawn('ssh', [sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth + ',IdentityFile=' + idfile], {
+		let term = pty.spawn('ssh', [sshuser + sshhost, '-p', sshport, '-o', 'PreferredAuthentications=' + sshauth, '-o', 'IdentityFile=' + idfile], {
 				name: 'xterm-256color',
 				cols: 80,
 				rows: 30
