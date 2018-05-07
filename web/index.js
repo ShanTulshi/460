@@ -209,7 +209,7 @@ app.use('/solution', ensureAuthenticated, checker);
 
 app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
 
-app.get('/term', ensureAuthenticated, function(req, res, next) {
+app.get('challenges/term', ensureAuthenticated, function(req, res, next) {
     console.log("TERM for user: " + req.user.username);
     res.redirect('/wetty/ssh/' + req.user.username);
 });
