@@ -4,3 +4,16 @@ title:  "Challenge 12"
 date:   2018-05-06 05:12:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Wow... that actually was pretty good... let's try something else
+
+### Challenge 12
+Now we'll give you another one-dimensional array, cool_array. Prove you're an array pro by summing all the numbers in the array and returning this value.
+
+## Hints
+Loops loops loops :)
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-13.html)

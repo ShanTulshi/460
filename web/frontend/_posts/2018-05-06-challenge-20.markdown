@@ -16,4 +16,4 @@ Structs are used in C to hold and manipulate data. Declare a struct yasha_struct
 Look into the syntax of declaring a struct and accessing the variables using `.`
 
 
-#### [Next Challenge](/challenges)
+#### [Home](/challenges)
