@@ -7,7 +7,7 @@ permalink: /challenge.html
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Challenges" }}</h2>
     <ul class="post-list">
-      {%- for post in site.posts -%}
+      {%- for post in site.posts reversed -%}
       <li>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
