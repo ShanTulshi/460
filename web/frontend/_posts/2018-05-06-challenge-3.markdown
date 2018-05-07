@@ -4,3 +4,16 @@ title:  "Challenge 3"
 date:   2018-05-06 05:03:11 +0000
 categories: challenges
 ---
+### yasha says
+
+Keep going!
+
+### Challenge 3
+
+We lied in challenge 2, there's actually another file in this directory but it's hidden! Echo it's name into yasha3
+
+### Hints
+
+You still have to use `ls` somehow....
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-4.html)

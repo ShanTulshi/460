@@ -4,3 +4,25 @@ title:  "Challenge 0"
 date:   2018-05-06 05:00:11 +0000
 categories: challenges
 ---
+
+### Welcome to yasha
+
+Welcome ... to yasha.
+
+This ... is ... yasha. Welcome. This is yasha; welcome ... to yasha. You can do anything at yasha. Anything at all. The only limit is yourself. Welcome ... to yasha.
+
+Welcome ... to yasha. This is ... yasha. Welcome ... to yasha! This is yasha, welcome! Yes ... This ... is yasha.
+
+This is yasha! And welcome to you, who have come to yasha. Anything ... is possible ... at yasha. You can do ... anything at yasha. The infinite is possible at yasha. The unattainable is unknown at yasha. Welcome to yasha. This ... is yasha.
+
+Welcome to yasha. Welcome. This ... is ... yasha. Welcome ... to yasha! Welcome ... to yasha.
+
+### Challenge 0
+
+Run the program: `yasha`
+
+### Hints
+
+`./` can run
+
+[Next Challenge](/challenges/challenges/2018/05/06/challenge-1.html)

@@ -4,3 +4,21 @@ title:  "Challenge 1"
 date:   2018-05-06 05:01:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Congratulations on solving Challenge 0 :) :) :)
+
+### Challenge 1
+
+Echo `"welcome to yasha"` into the program `yasha1`
+
+### Hints
+
+Useful commands/concepts to look up include:
+
+`echo`
+
+`>`
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-2.html)

@@ -4,3 +4,17 @@ title:  "Challenge 15"
 date:   2018-05-06 05:15:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Fine... that was ... acceptable.
+
+### Challenge 15
+
+Your time with strings isn't over yet. Create two string variables fruit1 and fruit2 initialized with the names of your two most favorite fruits. Use `strncmp` to check if these strings are equal and return the result.
+
+## Hints
+`strncmp` takes in three paramters: the two strings and something very important. Try searching for this last parameter and understanding why it is necessary.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-16.html)

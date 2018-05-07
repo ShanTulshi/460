@@ -4,3 +4,17 @@ title:  "Challenge 9"
 date:   2018-05-06 05:09:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+It seems you need to try something a bit harder.
+
+### Challenge 9
+
+Make a variable of type int named magic_num and initialize it with the value 777. Return this variable.
+
+## Hints
+An int in C is much like an int in many other languages. Make sure you have the correct syntax while decaling and initializing your variable. `;` is very important in C syntax.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-10.html)

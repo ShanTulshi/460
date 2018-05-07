@@ -4,3 +4,17 @@ title:  "Challenge 11"
 date:   2018-05-06 05:11:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Good job... that's completely non-ironic and sincere :)
+
+### Challenge 11
+
+Let's try working with arrays. Declare an array of ints of length 10. Populate it with the numbers 1-10 in order and return the value at the 7th index.
+
+## Hints
+Look up the syntax for C arrays. Type and length are important and there are multiple ways to populate arrays.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-12.html)

@@ -4,3 +4,17 @@ title:  "Challenge 14"
 date:   2018-05-06 05:14:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Time to stop making things so easy for you!
+
+### Challenge 14
+
+Let's try working with strings. Create a string hello_world and initialize it to "Hello World". Create an int called curr_year with the value 2018. Use printf to print your string followed by a space then the year.
+
+## Hints
+In order to manipulate a string in C we must declare it as an array...
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-15.html)

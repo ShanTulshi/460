@@ -4,3 +4,16 @@ title:  "Challenge 16"
 date:   2018-05-06 05:16:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Remember when you were back at challenge 0? Ahh, such good times...
+
+### Challenge 16
+Sometimes it's fun to stick strings together (but just sometimes). Use the three string variables one, two, and three to form the phrase "Hello Yasha's World" by utilizing the function `strncat`, and return the string.
+
+## Hints
+`strncat` is much like `strncmp`. Remember the parameters you used in the last challenge? You may have to use it multiple times...
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-17.html)

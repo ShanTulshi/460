@@ -4,3 +4,17 @@ title:  "Challenge 2"
 date:   2018-05-06 05:02:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+You did it!
+
+### Challenge 2
+
+What is the name of the only file in this directory? Echo the name into the program yasha3
+
+### Hints
+
+Look up `ls`
+
+[Next Challenge](/challenges/challenges/2018/05/06/challenge-3.html)

@@ -4,3 +4,16 @@ title:  "Challenge 18"
 date:   2018-05-06 05:18:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Goodness, goodness, goodness... Remember when you were a lil C beginner? Time certainly flies but let's get to the point.
+
+### Challenge 18
+Pointers are crucial in C as they hold memory addresses that "point" to values. Create a pointer called my_mysterious_ptr which points to the float 7.0.
+
+## Hints
+`*` <- this might just be very important
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-19.html)

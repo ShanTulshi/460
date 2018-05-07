@@ -4,3 +4,17 @@ title:  "Challenge 13"
 date:   2018-05-06 05:13:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Ooooo at lucky number 13. Or will it prove to be unlucky...
+
+### Challenge 13
+
+One dimensional arrays are so last challenge. Create another int array called rectangle of dimensions 5x4 and populate it with odd numbers. Assign 7 to the last index and return this index.
+
+## Hints
+Multidimensional aren't too different from one dimensional ones. This time you need to specify multiple sizes for each dimension.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-14.html)

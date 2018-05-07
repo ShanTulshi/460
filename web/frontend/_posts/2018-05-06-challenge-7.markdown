@@ -4,3 +4,17 @@ title:  "Challenge 7"
 date:   2018-05-06 05:07:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+So you mastered that last one... but can you handle this?
+
+### Challenge 7
+Use nano to open the file secret_yasha
+
+
+## Hints
+What is nano?! What's a file?! Why is CS so hard?! It's not. Stay cool and google `nano`.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-8.html)

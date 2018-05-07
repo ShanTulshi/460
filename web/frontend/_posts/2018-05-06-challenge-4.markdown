@@ -4,3 +4,17 @@ title:  "Challenge 4"
 date:   2018-05-06 05:04:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Hmmmm... so you've made it this far. See if you can figure out this one.
+
+### Challenge 4
+
+Try changing directories. Move into the directory called yashadir4 and echo the file into the program.
+
+### Hints
+
+Looking up `cd` might be helpful...
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-5.html)

@@ -4,3 +4,16 @@ title:  "Challenge 17"
 date:   2018-05-06 05:17:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+What's 17 squared? Seems irrelevent, no? Let's work on something more ... functional
+
+### Challenge 17
+Create a function mysteriousCalc which takes in the two int parameters low and high. Have it return (low+high) to the third power. Call this function using the int variables low1 and high1 and return the result.
+
+## Hints
+Function syntax can be quite simple. Remember that you need to specify return and parameter types.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-18.html)

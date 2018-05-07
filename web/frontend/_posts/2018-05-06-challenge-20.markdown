@@ -4,3 +4,16 @@ title:  "Challenge 20"
 date:   2018-05-06 05:20:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+It seems our journey is drawing to an end...
+
+### Challenge 20
+Structs are used in C to hold and manipulate data. Declare a struct yasha_struct called y and return the value of the variable c.
+
+## Hints
+Look into the syntax of declaring a struct and accessing the variables using `.`
+
+
+#### [Next Challenge](/challenges)

@@ -4,3 +4,16 @@ title:  "Challenge 19"
 date:   2018-05-06 05:19:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Well if you're not scared by pointers, we need to make things more complicated ...
+
+### Challenge 19
+What if we want to work with the value at the memory address that a pointer points to? This is called dereferencing the pointer. Dereference the pointer yashas_ptr and return the value.
+
+## Hints
+`*` <- this might be important once again. You can also look into `&` which you can use to get the memory address of a variable.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-20.html)

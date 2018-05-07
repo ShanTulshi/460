@@ -4,3 +4,17 @@ title:  "Challenge 10"
 date:   2018-05-06 05:010:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+This seems to come naturally to you. Interesting ...
+
+### Challenge 10
+
+Now make two floats, initialized with values that add to 14,  add them, and return the result.
+
+## Hints
+Doing math in C is very simple. Search for the `+` operator to make sure you understand this concept.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-11.html)

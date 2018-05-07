@@ -4,3 +4,17 @@ title:  "Challenge 8"
 date:   2018-05-06 05:08:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+There's really no stopping you is there...? In that case...
+
+### Challenge 8
+
+Replace the code in printf with "Hello, learning C is fun"
+
+## Hints
+A quick search for `printf` should help you out.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-9.html)

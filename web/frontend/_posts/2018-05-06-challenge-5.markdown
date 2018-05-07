@@ -4,3 +4,17 @@ title:  "Challenge 5"
 date:   2018-05-06 05:05:11 +0000
 categories: challenges
 ---
+
+### yasha says
+
+Great job so far!
+
+### Challenge 5
+
+Change to the directory specified by the path /yashadir5/secretfolder/anothersecretfolder
+
+## Hints
+Variants of `cd` are very useful.
+
+
+#### [Next Challenge](/challenges/challenges/2018/05/06/challenge-6.html)
