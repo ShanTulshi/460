@@ -39,7 +39,7 @@ module.exports = (opts) => {
 			if(err) {
 				console.log('ifconfig command error', err);
 			} else {
-				const ip = ((opts.ip) ? opts.ip : data);
+				const ip = ((opts.ip) ? opts.ip : data.slice(0, -1));
 				const port = 8081;
 
 				let app = express();
