@@ -33,6 +33,8 @@ module.exports = (opts) => {
 						res.status(200)
 						.json({result: result})
 						.send();
+					}).error((err) => {
+						console.log(err);
 					});
 				});
 			} else {
