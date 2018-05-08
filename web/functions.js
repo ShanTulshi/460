@@ -73,25 +73,6 @@ exports.localReg = function (username, password) {
                     });
                     child.stdin.end();
                 });
-                /*
-                cmd.get('sudo adduser --gecos "" --shell /home/' + username + '/entry_script.sh --ingroup players --disabled-password ' + username, (err, data, stderr) => {
-                    console.dir(err);
-                    console.dir(data);
-                    cmd.get('chpasswd ' + username + ':' + password + '\n', (err, data, stderr) => {
-                        console.dir(err);
-                        console.dir(data);
-                        cmd.get('sudo usermod -a -g docker ' + username, (err, data, stderr) => {
-                            console.dir(err);
-                            console.dir(data);
-                            cmd.get('sudo mkdir /home/' + username + '/workdir', (err, data, stderr) => {
-                                console.dir(err);
-                                console.dir(data);
-                                deferred.resolve(user);
-                            });
-                        });
-                    });
-                });
-                **/
             });
         }
       });

@@ -21,10 +21,16 @@ module.exports = (opts) => {
 		let result = false;
 		if(checker[req.params.num]) {
 			if((result = checker[req.params.num](req.query.attempt)) == true) {
-				req.user.update({ challenge: req.params.num + 1 });
-				res.status(200)
-					.json({result: result})
-					.send();
+				MongoClient.connect(mongodbUrl, (err, database) => {
+					var db = database.db('local');
+				  let collection = db.collection('localUsers');
+					collection.update({username: req.user.username}, {challenge: req.params.num + 1})
+					.then(() => {
+						res.status(200)
+						.json({result: result})
+						.send();
+					});
+				});
 			} else {
 				res.status(202)
 					.json({result: result})
