@@ -28,7 +28,7 @@ module.exports = (opts) => {
 				MongoClient.connect(mongodbUrl, (err, database) => {
 					var db = database.db('local');
 				  let collection = db.collection('localUsers');
-					collection.update({username: req.user.username}, {challenge: req.params.num + 1})
+					collection.update({username: req.user.username}, {challenge: { $set: req.params.num + 1 }})
 					.then(() => {
 						res.status(200)
 						.json({result: result})
