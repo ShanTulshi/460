@@ -66,11 +66,9 @@ if(opts.sslkey && opts.sslcert) {
 let app = express();
 
 if(usehttps) {
-	console.log('https on port ' + port);
 	httpserv = https.createServer(sslconf, app);
 }
 else {
-	console.log('http on port ' + port);
 	httpserv = http.createServer(app);
 }
 
@@ -223,3 +221,9 @@ app.get('/challenges/term', ensureAuthenticated, function(req, res, next) {
 checker(true);
 
 httpserv.listen(port, ip);
+
+if(usehttps) {
+	console.log('https on ' + ip + ':' + port);
+} else {
+	console.log('http on ' + ip + ':' + port);
+}

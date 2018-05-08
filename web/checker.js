@@ -17,6 +17,7 @@ module.exports = (opts) => {
 	};
 
 	router.get('/:num', (req, res) => {
+		console.log('checking answer for ' + req.params.num);
 		let result = false;
 		if(checker[req.params.num]) {
 			if((result = checker[req.params.num](req.query.attempt)) == true) {
@@ -50,7 +51,7 @@ module.exports = (opts) => {
 				  res.redirect('/signin');
 				}
 
-				app.use('/', ensureAuthenticated, router);
+				app.use('', router);
 				app.listen(port, ip);
 				console.log('checker listening on', ip + ':' + port);
 			}
