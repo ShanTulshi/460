@@ -45,7 +45,6 @@ module.exports = (opts) => {
 		const port = 8081;
 
 		let app = express();
-		console.log(app);
 
 		function ensureAuthenticated(req, res, next) {
 		  if (req.isAuthenticated()) { return next(); }
@@ -54,7 +53,7 @@ module.exports = (opts) => {
 		}
 
 		app.use('/', ensureAuthenticated, router);
-		app.listen();
+		app.listen(port, ip);
 	}
 	else {
 		return router;
