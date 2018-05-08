@@ -54,7 +54,7 @@ module.exports = (opts) => {
 				app.listen(port, ip);
 				console.log('checker listening on', ip + ':' + port);
 			}
-		}));
+		});
 	}
 	else {
 		return router;
