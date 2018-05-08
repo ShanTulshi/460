@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get -y install vim gcc
+RUN apt-get -y install vim gcc net-tools curl
 
 # RUN useradd --create-home --shell /bin/bash test
 # RUN groupadd players

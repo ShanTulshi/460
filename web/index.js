@@ -21,6 +21,7 @@ let express = require('express'),
 	;
 
 const default_port = 8080;
+const default_ip = '0.0.0.0';
 let usehttps = false;
 let sshport = 22;
 let sshhost = 'localhost';
@@ -43,10 +44,15 @@ const opts = require('optimist')
 			demand: false,
 			description: 'port to run on. default: 8080',
 		},
+		ip: {
+			demand: false,
+			desccription: 'IP to bind to. Default: 0.0.0.0',
+		},
 	}).boolean('allow_discovery').argv;
 
 // Check params:
 const port = ((opts.port) ? opts.port : default_port);
+const ip   = ((opts.ip) ? opts.ip : default_ip);
 
 if(opts.sslkey && opts.sslcert) {
 	usehttps = true;
@@ -214,4 +220,4 @@ app.get('/challenges/term', ensureAuthenticated, function(req, res, next) {
     res.redirect('/wetty/ssh/' + req.user.username);
 });
 
-httpserv.listen(port);
+httpserv.listen(port, ip);
