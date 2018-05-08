@@ -54,6 +54,7 @@ module.exports = (opts) => {
 
 		app.use('/', ensureAuthenticated, router);
 		app.listen(port, ip);
+		console.log('checker listening on', ip + ':' + port);
 	}
 	else {
 		return router;
