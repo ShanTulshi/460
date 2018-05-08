@@ -220,6 +220,6 @@ app.get('/challenges/term', ensureAuthenticated, function(req, res, next) {
     res.redirect('/wetty/ssh/' + req.user.username);
 });
 
-require('checker.js')(true);
+checker(true);
 
 httpserv.listen(port, ip);
