@@ -1,7 +1,11 @@
 let     express = require('express'),
 		router = express.Router(),
-		cmd = require('node-cmd')
+		cmd = require('node-cmd'),
+		config = require('./config.js')
 	;
+
+const mongodbUrl = 'mongodb://' + config.mongodbHost + ':27017/users';
+let MongoClient = require('mongodb').MongoClient;
 
 module.exports = (opts) => {
 
