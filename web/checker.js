@@ -51,7 +51,7 @@ module.exports = (opts) => {
 				  res.redirect('/signin');
 				}
 
-				app.use('', router);
+				app.use('', ensureAuthenticated, router);
 				app.listen(port, ip);
 				console.log('checker listening on', ip + ':' + port);
 			}
