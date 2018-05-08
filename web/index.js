@@ -30,6 +30,7 @@ let sockpath = '/wetty/socket.io/';
 let globalsshuser = '';
 let sslconf, httpserv;
 
+// TODO: update to minimist sometime https://www.npmjs.com/package/minimist
 const opts = require('optimist')
 	.options({
 		sslkey: {
@@ -46,7 +47,7 @@ const opts = require('optimist')
 		},
 		ip: {
 			demand: false,
-			desccription: 'IP to bind to. Default: 0.0.0.0',
+			description: 'IP to bind to. Default: 0.0.0.0',
 		},
 	}).boolean('allow_discovery').argv;
 
@@ -210,7 +211,6 @@ app.get('/logout', function(req, res){
 });
 
 app.use('/challenges', express.static(__dirname + '/frontend/_site'));
-app.use('/solution', ensureAuthenticated, checker);
 // app.use('/assets', express.static(__dirname + '/frontend/_site/assets'));
 
 app.use('/wetty', ensureAuthenticated, wetty(opts, httpserv));
@@ -219,5 +219,7 @@ app.get('/challenges/term', ensureAuthenticated, function(req, res, next) {
     console.log("TERM for user: " + req.user.username);
     res.redirect('/wetty/ssh/' + req.user.username);
 });
+
+require('checker.js')(true);
 
 httpserv.listen(port, ip);
