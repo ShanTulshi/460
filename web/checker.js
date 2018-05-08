@@ -35,26 +35,26 @@ module.exports = (opts) => {
 
 	if(opts) {
 
-		const ip = ((opts.ip) ? opts.ip : cmd.get('ifconfig docker0 | cut -d "\n" -f2 | cut -d: -f2 | cut -d " " -f1', (err, data, stderr) => {
+		cmd.get('ifconfig docker0 | cut -d "\n" -f2 | cut -d: -f2 | cut -d " " -f1', (err, data, stderr) => {
 			if(err) {
 				console.log('ifconfig command error', err);
 			} else {
-				return data;
+				const ip = ((opts.ip) ? opts.ip : data);
+				const port = 8081;
+
+				let app = express();
+
+				function ensureAuthenticated(req, res, next) {
+				  if (req.isAuthenticated()) { return next(); }
+				  req.session.error = 'Please sign in!';
+				  res.redirect('/signin');
+				}
+
+				app.use('/', ensureAuthenticated, router);
+				app.listen(port, ip);
+				console.log('checker listening on', ip + ':' + port);
 			}
 		}));
-		const port = 8081;
-
-		let app = express();
-
-		function ensureAuthenticated(req, res, next) {
-		  if (req.isAuthenticated()) { return next(); }
-		  req.session.error = 'Please sign in!';
-		  res.redirect('/signin');
-		}
-
-		app.use('/', ensureAuthenticated, router);
-		app.listen(port, ip);
-		console.log('checker listening on', ip + ':' + port);
 	}
 	else {
 		return router;
