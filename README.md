@@ -7,7 +7,7 @@ The project is set up into two main folders: `infra` and `web`.
 ## infra
 
 This contains all of the infrastructure supporting the project.
-- The Dockerfile is used to build the container that users log into when they use the online terminal, and is built with: `docker built -t wetty .`
+- The Dockerfile is used to build the container that users log into when they use the online terminal, and is built with: `docker build -t wetty .`
 - `create_entry_script.sh` is used to create an entry script for each new user that creates an account on the wargame site. Each user needs it to make sure their account puts them directly into the container with the proper working directory and permissions set up.
 
 ## web
