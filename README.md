@@ -4,6 +4,8 @@ This project is a simple wargame, meant to teach C & Linux basics.
 
 The project is set up into two main folders: `infra` and `web`.
 
+**Warning: This project is no longer maintained, and has security vulnerabilities. Deploy at your own risk.**
+
 ## infra
 
 This contains all of the infrastructure supporting the project.
